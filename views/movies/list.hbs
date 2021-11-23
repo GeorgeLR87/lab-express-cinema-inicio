@@ -1,0 +1,20 @@
+{{!-- ./views/movies/list.hbs --}}
+<a href="/"><h1>Ironhack Cinema</h1></a>
+
+
+<h2>Click on the movie to check the showtimes!</h2>
+
+
+<ul>
+{{#each data}}
+	<div class="card" style="width: 18rem;">
+  <img src="{{this.image}}" class="card-img-top" alt="{{this.title}}">
+  <div class="card-body">
+    <h5 class="card-title">{{this.title}}</h5>
+    <a href="/movies/{{this._id}}"><button type="button" class="btn btn-outline-secondary">See More</button></a>
+
+  </div>
+</div>	
+
+{{/each}}
+</ul>
